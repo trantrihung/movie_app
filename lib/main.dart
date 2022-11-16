@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Movie UI',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      darkTheme: AppTheme.light,
+      darkTheme: AppTheme.dark,
       themeMode: ThemeMode.dark,
       initialRoute: AppRouteName.home,
       onGenerateRoute: AppRoute.generate,

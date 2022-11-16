@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:movie_app/feature/home/presentation/widget/banner_widget.dart';
+import 'package:movie_app/feature/home/presentation/widget/category_widget.dart';
+import 'package:movie_app/feature/home/presentation/widget/now_playing_movie_widget.dart';
 import 'package:movie_app/feature/home/presentation/widget/section_title_widget.dart';
+import 'package:movie_app/feature/home/presentation/widget/upcoming_movie_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -46,13 +47,19 @@ class HomeScreen extends StatelessWidget {
               child: SectionTitleWidget(title: "Category"),
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: SectionTitleWidget(title: "Now Playing"),
+              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              child: CategoryWidget(),
             ),
+            const SizedBox(height: 16),
+            const NowPlayingMovieWidget(),
+            const SizedBox(height: 16),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: SectionTitleWidget(title: "Upcoming"),
             ),
+            const SizedBox(height: 16),
+            // const UpcomingMovieWidget(),
+            const UpcomingMovieWidget()
           ],
         ),
       ),
